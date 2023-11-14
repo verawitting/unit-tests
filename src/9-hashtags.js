@@ -1,3 +1,8 @@
 export const hashtags = (text) => {
-  return text
+
+  const hashtagRegex = /#(\w+)/g;
+
+  const matches = text.match(hashtagRegex);
+  
+  return matches || []
 }
